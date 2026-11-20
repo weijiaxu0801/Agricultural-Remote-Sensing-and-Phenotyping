@@ -8,7 +8,7 @@ The hyperspectral imagery (4 dates) comes from the public **Neusling 2012** data
 **Before running:** the image data is not included in this repository. Download it from the DOI above, then replace the eight placeholder paths in `datasets` (`path/to/your/...`) with your own local paths.
 
 
-## 1. RGB high-throughput leaf analysis → LAI & SPAD
+## 1. RGB high-throughput leaf analysis → LAI & SPAD(0-high throughout leaf analysis random forest rgb.py)
 
 **Task**: Estimate Leaf Area Index (LAI) and predict SPAD (chlorophyll proxy) using RGB imagery and a random forest model.
 **Method**:
