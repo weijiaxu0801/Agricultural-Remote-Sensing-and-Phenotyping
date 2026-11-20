@@ -16,15 +16,15 @@ from scipy.signal import savgol_filter
 import matplotlib.pyplot as plt
 
 
-datasets = [
-    (r'D:\2026.1.6下载\Neusling2012_01_Airborne_Data\01_Airborne_Data\20120428_Neusling_AVIS',
-     r'D:\2026.1.6下载\Neusling2012_03_InSitu_Measurements\03_InSitu_Measurements\02_Point_Measurements\120428_AVIS_1.shp'),
-    (r'D:\2026.1.6下载\Neusling2012_01_Airborne_Data\01_Airborne_Data\20120525_Neusling_AVIS',
-     r'D:\2026.1.6下载\Neusling2012_03_InSitu_Measurements\03_InSitu_Measurements\02_Point_Measurements\120525_AVIS_2.shp'),
-    (r'D:\2026.1.6下载\Neusling2012_01_Airborne_Data\01_Airborne_Data\20120616_Neusling_AVIS',
-     r'D:\2026.1.6下载\Neusling2012_03_InSitu_Measurements\03_InSitu_Measurements\02_Point_Measurements\120616_AVIS_3.shp'),
-    (r'D:\2026.1.6下载\Neusling2012_01_Airborne_Data\01_Airborne_Data\20120908_Neusling_AVIS',
-     r'D:\2026.1.6下载\Neusling2012_03_InSitu_Measurements\03_InSitu_Measurements\02_Point_Measurements\120908_AVIS_4.shp'),
+datasets = [ # change to your path
+    (r'your path:\20120428_Neusling_AVIS',
+     r'your path:\120428_AVIS_1.shp'),
+    (r'your path:\20120525_Neusling_AVIS',
+     r'your path:\120525_AVIS_2.shp'),
+    (r'your path:\20120616_Neusling_AVIS',
+     r'your path:\120616_AVIS_3.shp'),
+    (r'your path:\20120908_Neusling_AVIS',
+     r'your path:\120908_AVIS_4.shp'),
 ]
 
 
