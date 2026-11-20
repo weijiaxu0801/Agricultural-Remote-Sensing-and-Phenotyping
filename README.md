@@ -25,7 +25,7 @@ The hyperspectral imagery (4 dates) comes from the public **Neusling 2012** data
    Applied Savitzky–Golay first-derivative preprocessing to enhance spectral features in the red-edge and NIR regions.
    Merged multi-date datasets and trained a Random Forest model via Leave-One-Out cross-validation. Achieved an **R² of 0.153** (N = 335).
  **Sensor note**: the imagery is **airborne AVIS-3 at 4 m ground sampling distance** (197 bands, 477–1704 nm), read from the ENVI header — not EnMAP satellite data, and not 30 m.
- **Key insight**: The modest accuracy stems mainly from the mismatch between a 4 m pixel and a ~1 cm² leaf-level SPAD measurement, plus multi-date radiometric differences and the absence of soil-background masking. Feature importance highlighted bands in the blue–green and red-edge regions.
+ **Key insight**: The modest accuracy is a problem of support rather than of regression. A 4 m pixel integrates about 16 m² of canopy, soil and shadow, whereas one SPAD reading covers roughly 6 mm² of a single leaf; the four dates were acquired under different illumination and viewing geometry and were not normalized to a common reference; and the soil background was left unmasked. The band ranking reflects that entanglement: the red edge carries the chlorophyll signal, while the blue-green carries soil and residual atmosphere.
 
 ## 🛠 Tech Stack
 
