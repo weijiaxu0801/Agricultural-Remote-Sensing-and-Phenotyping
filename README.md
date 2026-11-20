@@ -1,5 +1,7 @@
 # Agricultural Remote Sensing & High-Throughput Phenotyping
-This repository contains my Python pipelines for processing UAV RGB and airborne hyperspectral imagery to predict crop physiological traits. 
+Two Python pipelines for processing UAV RGB and airborne hyperspectral imagery to predict crop physiological traits.
+Data sources: The RGB imagery and SPAD measurements come from my own graduate research project.The hyperspectral imagery (4 dates) comes from the public Neusling 2012 dataset archived by GFZ / WDC-terra (DOI: 10.5880/enmap.2016.007) — not my own fieldwork; my contribution was the metadata handling, point–pixel matching, spectral preprocessing, modelling and validation.
+Before running: the image data is not included in this repository. Download it from the DOI above, then replace the eight placeholder paths in datasets (path/to/your/...) with your own local paths.
 
 ## 1. 0-high throughout leaf analysis random forest rgb
 - **Task:** Estimate Leaf Area Index (LAI) and predict SPAD (chlorophyll proxy) using RGB imagery and random forest model.
@@ -15,7 +17,7 @@ This repository contains my Python pipelines for processing UAV RGB and airborne
   - Extracted ground truth points from ESRI Shapefiles and matched them with hyperspectral pixels using GeoPandas and Rasterio.
   - Applied Savitzky-Golay first-derivative preprocessing to enhance spectral features in the Red-Edge and NIR regions.
   - Merged multi-date datasets and trained a Random Forest model via Leave-One-Out cross-validation. Achieved an **\(R^2\) of 0.153** (N = 335).
-- **Key insight:** Analyzed model limitations caused by 30m spatial resolution (mixed pixels) and temporal mismatch. Feature importance highlighted critical bands in the Blue-Green and Red-Edge regions.
+- **Key insight:** The modest accuracy stems mainly from the mismatch between a 4 m pixel and a ~1 cm² leaf-level SPAD measurement, plus multi-date radiometric differences and the absence of soil-background masking. Feature importance highlighted bands in the blue–green and red-edge regions.
 
 ## 🛠 Tech Stack
 - **Languages:** Python
