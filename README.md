@@ -3,7 +3,7 @@
 Two Python pipelines for processing UAV RGB and airborne hyperspectral imagery to predict crop physiological traits.
 
 **Data sources.** The RGB imagery and SPAD measurements come from my own graduate research project.
-The hyperspectral imagery (4 dates) comes from the public **Neusling 2012** dataset archived by GFZ / WDC-terra (DOI: 0) — not my own fieldwork; my contribution was the metadata handling, point–pixel matching, spectral preprocessing, modelling and validation.
+The hyperspectral imagery (4 dates) comes from the public **Neusling 2012** dataset archived by GFZ / WDC-terra (DOI: 10.5880/enmap.2016.007) — not my own fieldwork; my contribution was the metadata handling, point–pixel matching, spectral preprocessing, modelling and validation.
 
 **Before running:** the image data is not included in this repository. Download it from the DOI above, then replace the eight placeholder paths in `datasets` (`path/to/your/...`) with your own local paths.
 
