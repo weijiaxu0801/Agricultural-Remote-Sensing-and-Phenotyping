@@ -17,14 +17,14 @@ import matplotlib.pyplot as plt
 
 
 datasets = [ # change to your path
-    (r'your path:\20120428_Neusling_AVIS',
-     r'your path:\120428_AVIS_1.shp'),
-    (r'your path:\20120525_Neusling_AVIS',
-     r'your path:\120525_AVIS_2.shp'),
-    (r'your path:\20120616_Neusling_AVIS',
-     r'your path:\120616_AVIS_3.shp'),
-    (r'your path:\20120908_Neusling_AVIS',
-     r'your path:\120908_AVIS_4.shp'),
+    (r'path/to/your/20120428_Neusling_AVIS',
+     r'path/to/your/120428_AVIS_1.shp'),
+    (r'path/to/your/20120525_Neusling_AVIS',
+     r'path/to/your/120525_AVIS_2.shp'),
+    (r'path/to/your/20120616_Neusling_AVIS',
+     r'path/to/your/120616_AVIS_3.shp'),
+    (r'path/to/your/20120908_Neusling_AVIS',
+     r'path/to/your/120908_AVIS_4.shp'),
 ]
 
 
