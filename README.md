@@ -8,7 +8,7 @@ The hyperspectral imagery (4 dates) comes from the public **Neusling 2012** data
 **Before running:** the image data is not included in this repository. Download it from the DOI above, then replace the eight placeholder paths in `datasets` (`path/to/your/...`) with your own local paths.
 
 
-## 1. RGB high-throughput leaf analysis → LAI & SPAD(0-high throughout leaf analysis random forest rgb.py)
+## 1. RGB high-throughput leaf analysis → LAI & SPAD(0-high throughput leaf analysis random forest rgb.py)
 
 **Task**: Estimate Leaf Area Index (LAI) and predict SPAD (chlorophyll proxy) using RGB imagery and a random forest model.
 **Method**:
@@ -24,7 +24,7 @@ The hyperspectral imagery (4 dates) comes from the public **Neusling 2012** data
    Extracted ground truth points from ESRI Shapefiles and matched them with hyperspectral pixels using GeoPandas and Rasterio.
    Applied Savitzky–Golay first-derivative preprocessing to enhance spectral features in the red-edge and NIR regions.
    Merged multi-date datasets and trained a Random Forest model via Leave-One-Out cross-validation. Achieved an **R² of 0.153** (N = 335).
- **Sensor note**: the imagery is **airborne AVIS-3 at 4 m ground sampling distance** (197 bands,477–1704 nm), read from the ENVI header — not EnMAP satellite data, and not 30 m.
+ **Sensor note**: the imagery is **airborne AVIS-3 at 4 m ground sampling distance** (197 bands, 477–1704 nm), read from the ENVI header — not EnMAP satellite data, and not 30 m.
  **Key insight**: The modest accuracy stems mainly from the mismatch between a 4 m pixel and a ~1 cm² leaf-level SPAD measurement, plus multi-date radiometric differences and the absence of soil-background masking. Feature importance highlighted bands in the blue–green and red-edge regions.
 
 ## 🛠 Tech Stack
