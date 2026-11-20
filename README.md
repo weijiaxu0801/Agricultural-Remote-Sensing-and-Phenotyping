@@ -17,7 +17,7 @@ The hyperspectral imagery (4 dates) comes from the public **Neusling 2012** data
   Built a Random Forest regression model using 5 indices (ExG, NGRDI, GLI, VARI, TGI) to predict SPAD across 11 field treatments. Achieved an **R² of 0.455**.
   **Key insight**: Feature importance analysis identified VARI (Visible Atmospherically Resistant Index) as the most critical predictor.
 
-## 2. Multi-date hyperspectral SPAD inversion
+## 2. Multi-date hyperspectral SPAD inversion(0-multiple time hyperspectral analysis new.py)
 
  **Task**: Predict SPAD from airborne hyperspectral imagery across multiple dates.
  **Method**:
