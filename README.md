@@ -28,7 +28,7 @@ The hyperspectral imagery (4 dates) comes from the public **Neusling 2012** data
    Applied Savitzky–Golay first-derivative preprocessing to enhance spectral features in the red-edge and NIR regions.
    Merged multi-date datasets and trained a Random Forest model via Leave-One-Out cross-validation. Achieved an **R² of 0.153** (N = 335).
  **Sensor note**: the imagery is **airborne AVIS-3 at 4 m ground sampling distance** (197 bands, 477–1704 nm), read from the ENVI header — not EnMAP satellite data, and not 30 m.
- **Key insight**: The modest accuracy is a problem of support rather than of regression. A 4 m pixel integrates about 16 m² of canopy, soil and shadow, whereas one SPAD reading covers roughly 6 mm² of a single leaf; the four dates were acquired under different illumination and viewing geometry and were not normalized to a common reference; and the soil background was left unmasked. The band ranking reflects that entanglement: the red edge carries the chlorophyll signal, while the blue-green carries soil and residual atmosphere.
+ **Key insight**: The modest accuracy is a problem of support rather than of regression. A 4 m pixel integrates about 16 m² of canopy, soil and shadow, whereas one SPAD reading covers roughly 6 mm² of a single leaf;  and the soil background was left unmasked. The band ranking reflects that entanglement: the red edge carries the chlorophyll signal, while the blue-green carries soil and residual atmosphere.
 
 ## Limitations / what I would do differently
 Point–pixel matching is single-pixel and assumes the shapefile already shares the raster CRS (both are UTM 33N here). There is no to_crs guard and no 3×3 window, so a mis-projected shapefile would fail silently.
